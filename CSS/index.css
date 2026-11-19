@@ -1,0 +1,98 @@
+/*Embedding Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+/*Tilt Neon - For <p> more formal*/
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+/*VT323 - For game pages*/
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+/*Playpen Sans - For mostly titles / subtitles*/
+
+/*Setting up color platte variable*/
+:root {
+  --base-clr: #D9C7EA;
+  --line-clr: #1F1941;
+  --hover-clr: #e0c2eb;
+  --text-clr: #62377c;
+  --accent-clr: #a55795;
+  --active-clr: #C1ACDC;
+  --secondary-text-clr: #76658F;
+
+  --Tilt: "Tilt Neon", sans;
+  --VT: "VT323", sans;
+  --Playpen: "Playpen Sans", sans;
+}
+
+/*Base setup*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Tilt Neon', 'VT323', 'Playpen Sans', sans-serif;
+  line-height: 1.5rem;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+#content {
+  position: relative;
+  min-width: 0;
+}
+
+/*
+
+
+Main setup
+
+
+*/
+main {
+  padding: min(30px, 7%);
+}
+
+main p {
+  color: var(--secondary-text-clr);
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.container {
+  border: 1px solid var(--line-clr);
+  border-radius: 1em;
+  margin-bottom: 20px;
+  padding: min(3em, 15%);
+
+  h2,
+  p {
+    margin-top: 1em
+  }
+}
+
+#back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+  background-color: var(--hover-clr);
+  text-decoration: none;
+  font-family: var(--Tilt);
+  font-weight: bold;
+  letter-spacing: .02em;
+  transition: color .2s ease, transform .2s ease;
+}
+
+#back-btn span {
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--text-clr);
+}
+
+#back-btn:hover {
+  color: var(--accent-clr, #a55795);
+  transform: translateX(-3px);
+}
