@@ -39,8 +39,8 @@ main {
 }
 
 .narrative-hub__intro>p:last-child {
-    max-width: 70ch;
-    margin: 0;
+    max-width: 100%;
+    margin-top: 20px;
     color: var(--secondary-text-clr, #76658F);
     font-family: var(--Playpen, 'Playpen Sans'), sans-serif;
     line-height: 1.7;
