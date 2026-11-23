@@ -73,12 +73,21 @@ footer a{
   padding: 5px 10px;
 }
 
+#back-btn span a {
+  color: var(--text-clr);
+  text-decoration: none;
+}
+
 #back-btn:hover button{
   background-color: var(--text-clr);
 }
 
 #back-btn:hover button svg{
   fill: var(--base-clr);
+}
+
+#back-btn:hover button span a{
+  color: var(--base-clr);
 }
 
 #back-btn:hover span {

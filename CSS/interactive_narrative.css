@@ -338,6 +338,15 @@ footer {
   font-size: 1.1rem
 }
 
+#back-btn:hover button span a{
+  color: var(--base-clr);
+}
+
+#back-btn span a {
+  color: var(--text-clr);
+  text-decoration: none;
+}
+
 @media(max-width:900px) {
   .flow {
     grid-template-columns: repeat(2, 1fr)

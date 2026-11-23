@@ -410,6 +410,15 @@ figcaption {
   transition: color .2s ease, transform .2s ease;
 }
 
+#back-btn:hover button span a{
+  color: var(--base-clr);
+}
+
+#back-btn span a {
+  color: var(--text-clr);
+  text-decoration: none;
+}
+
 @media (max-width: 760px) {
   .narrative-page #top-nav { padding: 0 18px; }
   .narrative-page #top-nav .top-links { gap: 14px; }
