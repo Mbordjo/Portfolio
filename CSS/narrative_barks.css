@@ -27,6 +27,19 @@
   
 }
 
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 25px 0 12px;
+  border-top: 1px solid rgba(31, 25, 65, .25);
+  color: var(--secondary-text-clr, #76658F);
+  font-family: var(--VT, monospace);
+  letter-spacing: .08em;
+}
+.page-footer a { color: var(--text-clr, #62377c); text-decoration: none; }
+.page-footer a:hover { color: var(--accent-clr, #a55795); }
+
 footer a{
     color: var(--accent-clr);
     text-decoration: none;
