@@ -15,6 +15,39 @@
   --Playpen: "Playpen Sans", sans;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--base-clr);
+    color: var(--text-clr);
+    font-family: var(--Playpen);
+    line-height: 1.65;
+}
+
+.top-label {
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 12px clamp(18px, 5vw, 64px);
+    border-bottom: 2px solid var(--secondary-text-clr);
+    background: var(--active-clr);
+    font-family: var(--VT);
+    letter-spacing: .08em;
+    font-size: 1.15rem;
+    color: var(--secondary-text-clr);
+    justify-content: right;
+    padding-right: 10px;
+}
+
 #back-btn button{
   border: none;
   display: inline-flex;
@@ -58,6 +91,10 @@
   color: var(--base-clr);
 }
 
+#content{
+    background-color: var(--base-clr);
+}
+
 .narrative-page {
   display: block;
   min-height: 100vh;
@@ -79,20 +116,6 @@
   border-bottom: 1px solid rgba(31, 25, 65, .22);
   background: rgba(217, 199, 234, .92);
 }
-
-.back-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--text-clr, #62377c);
-  text-decoration: none;
-  font-family: var(--Tilt, sans-serif);
-  font-weight: bold;
-  letter-spacing: .02em;
-  transition: color .2s ease, transform .2s ease;
-}
-.back-button span { font-size: 1.5rem; line-height: 1; }
-.back-button:hover { color: var(--accent-clr, #a55795); transform: translateX(-3px); }
 
 .narrative-page .top-links {
   display: flex;
@@ -343,6 +366,33 @@ figcaption {
 }
 .page-footer a { color: var(--text-clr, #62377c); text-decoration: none; }
 .page-footer a:hover { color: var(--accent-clr, #a55795); }
+
+
+.reflection-prompts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.reflection-prompts article {
+    padding: 18px;
+    border: 1.5px dashed var(--accent-clr);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .22);
+}
+
+.reflection-prompts h3 {
+    font-size: 1.05rem;
+    margin: 0 0 9px;
+}
+
+.reflection-prompts p {
+    color: var(--secondary-text-clr);
+    margin: 0;
+    font-size: .94rem;
+}
 
 @media (max-width: 760px) {
   .narrative-page #top-nav { padding: 0 18px; }
