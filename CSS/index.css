@@ -42,6 +42,7 @@ body {
 #content {
   position: relative;
   min-width: 0;
+  width: 100%;
 }
 
 /*
@@ -61,19 +62,8 @@ main p {
   margin-bottom: 15px;
 }
 
-.container {
-  border: 1px solid var(--line-clr);
-  border-radius: 1em;
-  margin-bottom: 20px;
-  padding: min(3em, 15%);
-
-  h2,
-  p {
-    margin-top: 1em
-  }
-}
-
-#back-btn {
+#back-btn button{
+  border: none;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -84,15 +74,29 @@ main p {
   font-weight: bold;
   letter-spacing: .02em;
   transition: color .2s ease, transform .2s ease;
+  
+}
+
+#back-btn button svg{
+  color: var(--text-clr);
+  fill: var(--text-clr);
 }
 
 #back-btn span {
   font-size: 1.5rem;
   line-height: 1;
   color: var(--text-clr);
+  padding: 5px 10px;
 }
 
-#back-btn:hover {
-  color: var(--accent-clr, #a55795);
-  transform: translateX(-3px);
+#back-btn:hover button{
+  background-color: var(--text-clr);
+}
+
+#back-btn:hover button svg{
+  fill: var(--base-clr);
+}
+
+#back-btn:hover span {
+  color: var(--base-clr);
 }

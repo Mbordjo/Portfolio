@@ -5,630 +5,595 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yuna Mori (Pulse) | Character Bark Bank</title>
-    <link rel="stylesheet" href="CSS/Index.css">
-    <link rel="stylesheet" href="CSS/TopNav.css">
-    <link rel="stylesheet" href="../CSS/Narrativee.css">
+    <link rel="stylesheet" href="../../CSS/topnav.css">
+    <link rel="stylesheet" href="../../CSS/phone.css">
+    <link rel="stylesheet" href="../../CSS/narrative_barks.css">
 </head>
 
 <body class="narrative-page">
-    <div id="content">
-        <header id="top-nav">
-            <a class="back-button" href="../narrative.html" aria-label="Back to Narrative Hub"><span
-                    aria-hidden="true">←</span> Back to Narrative Hub</a>
-            <div class="top-links">
-                <a href="../about.html">About Me</a><a href="../resume.html">Resume</a><a
-                    href="../contact.html">Contact</a>
+    <div id="top-nav">
+        <div class="menu">
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="back-btn">
+        <button onclick="window.history.back()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#e3e3e3">
+                <path d="M14,18L8,12l6-6l1.4,1.4L10.8,12l4.6,4.6L14,18Z" />
+            </svg>
+            <span>Back</span>
+        </button>
+    </div>
+    <span class="top-label">NARRATIVE DESIGN / GAME DIALOGUE</span>
+    <main class="page">
+        <section class="intro">
+            <p class="eyebrow">VALORANT · CHARACTER BARK BANK</p>
+            <h1>Yuna Mori <span>“Pulse”</span></h1>
+            <p class="subtitle">Combat Dialogue built around a sharp-minded Sentinel who turns information,
+                interference, and a little sarcasm into a battlefield advantage.
+            </p>
+            <div class="description">
+                <h2>Project Description</h2>
+                <p>For this assignment, I created a character bark bank for Yuna Mori, an original Sentinel agent known
+                    by the callsign Pulse. The bank organizes short pieces of in-game dialogue by context and trigger,
+                    including match starts, ability use, kills, kill streaks, taunts, and leaving spike at spawn.</p>
+                <p>Pulse is a technology specialist who manipulates communication signals and gathers battlefield
+                    information. Her personality is clever, sarcastic, observant, and confident, so I used her dialogue
+                    to communicate both her technical expertise and her attitude. The lines are designed to respond to
+                    gameplay moments while helping the player understand who she is.</p>
+                <p>I also wrote variations for many triggers and character-specific interactions with agents such as
+                    Killjoy, Jett, Cypher, Sova, Raze, Omen, Phoenix, and Sage. These exchanges help show how Pulse's
+                    voice changes depending on whether she is addressing an ally or an opponent.</p>
             </div>
-        </header>
+        </section>
 
-        <main class="narrative-main">
-            <div class="page-kicker">NARRATIVE DESIGN / GAME DIALOGUE</div>
-            <section class="project-heading">
-                <p class="section-number">HERO SHOOTER CHARACTER BARK BANK</p>
-                <h1>Yuna Mori <span>// Pulse</span></h1>
-                <p class="project-subtitle">A sharp-minded Sentinel who turns information, interference, and a little
-                    sarcasm into a battlefield advantage.</p>
-                <div class="project-tags"><span>Dialogue Writing</span><span>Character Barks</span><span>Hero
-                        Shooter</span><span>Valorant-inspired</span></div>
-            </section>
-
-            <section class="description-section" id="description">
-                <div class="description-mark">PROJECT DESCRIPTION</div>
-                <div>
-                    <p class="eyebrow">WHY I MADE THIS</p>
-                    <h2>Giving a character a voice in the middle of the action.</h2>
-                    <p>For this assignment, I created a character bark bank for Yuna Mori, an original Sentinel agent
-                        known by the callsign Pulse. The bank organizes short pieces of in-game dialogue by context and
-                        trigger, including match starts, ability use, kills, kill streaks, taunts, idle moments, and the
-                        Spike spawning.</p>
-                    <p>Pulse is a technology specialist who manipulates communication signals and gathers battlefield
-                        information. Her personality is clever, sarcastic, observant, and confident, so I used her
-                        dialogue to communicate both her technical expertise and her attitude. The lines are designed to
-                        respond to gameplay moments while helping the player understand who she is.</p>
-                    <p>I also wrote variations for many triggers and character-specific interactions with agents such as
-                        Killjoy, Jett, Cypher, Sova, Raze, Omen, Phoenix, and Sage. These exchanges help show how
-                        Pulse's voice changes depending on whether she is addressing an ally or an opponent.</p>
-                </div>
-            </section>
-
-            <section class="intro-layout">
-                <div class="intro-copy">
-                    <p class="eyebrow">01 / AT A GLANCE</p>
-                    <h2>Information is her strongest weapon.</h2>
-                    <p>Yuna Mori, or Pulse, is a Sentinel recruited by the Valorant Protocol for her ability to
-                        manipulate communication signals and collect information about enemy movement. Before joining
-                        the Protocol, she worked on experimental communication systems and developed gadgets for
-                        detection and signal disruption.</p>
-                    <p>In a team, Pulse focuses on protecting areas, gathering information, and helping her allies
-                        prepare for enemy attacks. Her confidence comes through in quick observations, dry humor, and
-                        playful challenges.</p>
-                </div>
-                <aside class="portrait-card pulse-profile-card">
-                    <div class="pulse-signal-art" aria-hidden="true"><span> PULSE </span><i></i><i></i><i></i></div>
-                    <figcaption>Agent identity · Original character concept</figcaption>
-                </aside>
-            </section>
-
-            <section class="content-section" id="snapshot">
-                <p class="eyebrow">02 / CHARACTER SNAPSHOT</p>
-                <h2>The essentials</h2>
-                <div class="snapshot-grid">
-                    <div class="snapshot-item"><span>Real name</span><strong>Yuna Mori</strong></div>
-                    <div class="snapshot-item"><span>Agent name</span><strong>Pulse</strong></div>
-                    <div class="snapshot-item"><span>Role</span><strong>Sentinel</strong></div>
-                    <div class="snapshot-item"><span>Personality</span><strong>Clever, sarcastic, observant,
-                            confident</strong></div>
-                    <div class="snapshot-item wide"><span>Specialty</span><strong>Manipulating communication signals,
-                            detecting enemy movement, and gathering battlefield information.</strong></div>
-                    <div class="snapshot-item wide"><span>Character dynamic</span><strong>She enjoys the company of
-                            fellow technology specialist Killjoy, is interested in Cypher's information-gathering
-                            methods, and keeps a skeptical eye on his secrets.</strong></div>
-                </div>
-            </section>
-
-            <section class="content-section" id="voice">
-                <p class="eyebrow">03 / VOICE & PERSONALITY</p>
+        <section class="profile section-card">
+            <div>
+                <p class="eyebrow">CHARACTER SNAPSHOT</p>
+                <h2>Real Name: Yuna Mori</h2>
+                <p>Agent Name: Pulse<br>
+                    Role: Sentinel<br>
+                    Original Character Concept</p>
+                <p>Personality: Clever, Sarcastic, Observant, Confident<br>
+                    Specialty: Manipulating communication signals, detecting enemy movement, and gathering battlefield
+                    information.<br>
+                    Character Dynamic: She enjoys the company of fellow technology specialist Killjoy, is interested in
+                    Cypher's information-gathering methods, and keeps a skeptical eye on his secrets.
+                </p>
+                <p>Yuna Mori, or Pulse, is a Sentinel recruited by the Valorant Protocol for her ability to manipulate
+                    communication signals and collect information about enemy movement. Before joining the Protocol, she
+                    worked on experimental communication systems and developed gadgets for detection and signal
+                    disruption.</p>
+                <p>In a team, Pulse focuses on protecting areas, gathering information, and helping her allies prepare
+                    for enemy attacks. Her confidence comes through in quick observations, dry humor, and playful
+                    challenges.</p>
+            </div>
+            <div class="profile-mark" aria-label="Pulse character motif">PULSE</div>
+        </section>
+        <section class="profile section-card">
+            <div>
+                <p class="eyebrow">VOICE & PERSONALITY</p>
                 <h2>Confident, quick, and a little cutting</h2>
-                <p class="section-intro">Pulse's dialogue balances tactical awareness with a sarcastic sense of humor.
-                    She often frames combat through technology and signals, making her lines feel connected to her
-                    specialty rather than interchangeable with another agent's voice.</p>
-                <div class="quote-grid">
-                    <blockquote><span>TACTICAL CONFIDENCE</span>
-                        <p>“I've got eyes on the battlefield. Try not to disappoint me.”</p>
-                    </blockquote>
-                    <blockquote><span>TECHNICAL EXPERTISE</span>
-                        <p>“Sensor's active. Nobody gets through unnoticed.”</p>
-                    </blockquote>
-                    <blockquote><span>SARCASM</span>
-                        <p>“I've seen better aim in a training simulation.”</p>
-                    </blockquote>
-                    <blockquote><span>PLAYFUL BRAVADO</span>
-                        <p>“Is anyone else even trying?”</p>
-                    </blockquote>
-                </div>
-            </section>
-
-            <section class="content-section" id="bark-categories">
-                <p class="eyebrow">04 / DIALOGUE STRUCTURE</p>
+                <p>Pulse's dialogue balances tactical awareness with a sarcastic sense of humor. She often frames combat
+                    through technology and signals, making her lines feel connected to her specialty rather than
+                    interchangeable with another agent's voice.</p>
+                <blockquote><span>TACTICAL CONFIDENCE</span>
+                    <p>“I've got eyes on the battlefield. Try not to disappoint me.”</p>
+                </blockquote>
+                <blockquote><span>TECHNICAL EXPERTISE</span>
+                    <p>“Sensor's active. Nobody gets through unnoticed.”</p>
+                </blockquote>
+                <blockquote><span>SARCASM</span>
+                    <p>“I've seen better aim in a training simulation.”</p>
+                </blockquote>
+                <blockquote><span>PLAYFUL BANTER</span>
+                    <p>“Is anyone else even trying?”</p>
+                </blockquote>
+            </div>
+        </section>
+        <section class="profile section-card">
+            <div>
+                <p class="eyebrow">DIALOGUE STRUCTURE</p>
                 <h2>Writing for gameplay moments</h2>
                 <p class="section-intro">The bark bank is organized around the moments when a player might hear Pulse
                     speak. Many triggers include alternate lines, giving repeated gameplay events more than one possible
                     response.</p>
                 <div class="detail-list">
-                    <article><span class="detail-index">01</span>
-                        <div>
-                            <h3>Combat and abilities</h3>
-                            <p>Match-start lines establish her confidence. Ability barks for Tracepoint Sensor, Dead
-                                Air, Feedback, and her ultimate Blackout connect the dialogue directly to her equipment
-                                and signal-based powers.</p>
-                        </div>
+                    <div>
+                        <h3>Combat and abilities</h3>
+                        <p>Match-start lines establish her confidence. Ability barks for Tracepoint Sensor, Dead
+                            Air, Feedback, and her ultimate Blackout connect the dialogue directly to her equipment
+                            and signal-based powers.</p>
+                    </div>
                     </article>
-                    <article><span class="detail-index">02</span>
-                        <div>
-                            <h3>Kills, streaks, and taunts</h3>
-                            <p>Short reactions celebrate successful plays and let Pulse tease opponents. Her taunts
-                                often use technical language, such as questioning an enemy's aim or suggesting that
-                                their settings are the problem.</p>
-                        </div>
+                    <div>
+                        <h3>Kills, streaks, and taunts</h3>
+                        <p>Short reactions celebrate successful plays and let Pulse tease opponents. Her taunts
+                            often use technical language, such as questioning an enemy's aim or suggesting that
+                            their settings are the problem.</p>
+                    </div>
                     </article>
-                    <article><span class="detail-index">03</span>
-                        <div>
-                            <h3>Ally and enemy interactions</h3>
-                            <p>Character-specific barks reveal relationships through banter. With Killjoy, Pulse turns
-                                their shared interest in inventions into friendly competition. With Cypher, she jokes
-                                about cameras and information gathering; with Sova, she recognizes how their tracking
-                                skills could work together.</p>
-                        </div>
+                    <div>
+                        <h3>Ally and enemy interactions</h3>
+                        <p>Character-specific barks reveal relationships through banter. With Killjoy, Pulse turns
+                            their shared interest in inventions into friendly competition. With Cypher, she jokes
+                            about cameras and information gathering; with Sova, she recognizes how their tracking
+                            skills could work together.</p>
+                    </div>
                     </article>
-                    <article><span class="detail-index">04</span>
-                        <div>
-                            <h3>Idle and objective moments</h3>
-                            <p>Between rounds, Pulse comments on taking apart equipment or borrowing a tool. When the
-                                Spike spawns, she shifts back toward the objective and reminds the team to retrieve it.
-                            </p>
-                        </div>
+                    <div>
+                        <h3>Idle and objective moments</h3>
+                        <p>Between rounds, Pulse comments on taking apart equipment or borrowing a tool. When the
+                            Spike spawns, she shifts back toward the objective and reminds the team to retrieve it.
+                        </p>
+                    </div>
                     </article>
                 </div>
-            </section>
-
-            <section class="content-section" id="relationships">
-                <p class="eyebrow">05 / CHARACTER DYNAMICS</p>
+        </section>
+        <section class="profile section-card">
+            <div>
+                <p class="eyebrow">CHARACTER DYNAMICS</p>
                 <h2>Relationships through dialogue</h2>
                 <div class="two-column">
-                    <article class="writing-card relationship-card"><span class="card-label">KILLJOY / FRIENDLY
-                            RIVAL</span>
-                        <h3>Two inventors, one competition</h3>
+                    <article>
+                        <h3><span class="card-label">KILLJOY / FRIENDLY RIVAL</span></h3>
+                        <h4>Two inventors, one competition</h4>
                         <p>Pulse gets along with Killjoy because they share an interest in technology, but their
                             conversations sometimes become a competition over whose inventions are better. Pulse's lines
                             tease Killjoy while still showing respect for her abilities.</p>
                         <p class="tone-note"><strong>Tone:</strong> Competitive, teasing, familiar, and good-natured.
                         </p>
+                        <hr>
                     </article>
-                    <article class="writing-card relationship-card"><span class="card-label">CYPHER / MUTUAL
-                            CURIOSITY</span>
-                        <h3>Information has its limits</h3>
+                    <article>
+                        <h3><span class="card-label">CYPHER / MUTUAL CURIOSITY</span></h3>
+                        <h4>Information has its limits</h4>
                         <p>Pulse finds Cypher's methods interesting, but she does not completely trust him. Her lines
                             challenge his reliance on cameras and spying, while also acknowledging that they share an
                             interest in collecting information.</p>
                         <p class="tone-note"><strong>Tone:</strong> Curious, skeptical, and playfully suspicious.</p>
+                        <hr>
                     </article>
-                    <article class="writing-card relationship-card"><span class="card-label">SOVA / TACTICAL
-                            PARTNERSHIP</span>
-                        <h3>Find them, then track them</h3>
+                    <article>
+                        <h3><span class="card-label">SOVA / TACTICAL PARTNERSHIP</span></h3>
+                        <h4>Find them, then track them</h4>
                         <p>Pulse recognizes the value of Sova's recon skills and imagines how their abilities could
                             complement one another. Their dialogue has a more cooperative feel, even when she lightly
                             teases him.</p>
                         <p class="tone-note"><strong>Tone:</strong> Respectful, collaborative, lightly teasing.</p>
+                        <hr>
                     </article>
-                    <article class="writing-card relationship-card"><span class="card-label">OTHER AGENTS</span>
-                        <h3>A distinct response for each teammate</h3>
+                    <article>
+                        <h3><span class="card-label">OTHER AGENTS</span></h3>
+                        <h4>A distinct response for each teammate</h4>
                         <p>Her barks with Jett, Raze, Omen, Phoenix, and Sage give each interaction its own angle, from
                             jokes about speed and explosions to startled reactions and appreciation for team support.
                         </p>
                         <p class="tone-note"><strong>Tone:</strong> Changes with the character and situation.</p>
                     </article>
                 </div>
-            </section>
-
-            <section class="content-section" id="sample-bank">
-                <p class="eyebrow">06 / SELECTED BARKS</p>
-                <h2>A few lines from the bank</h2>
-                <div class="quote-grid">
-                    <blockquote><span>ABILITY / TRACEPOINT TRIGGERED</span>
-                        <p>“Got something on the wire!”</p>
-                    </blockquote>
-                    <blockquote><span>ULTIMATE / BLACKOUT</span>
-                        <p>“Let's take you all offline!”</p>
-                    </blockquote>
-                    <blockquote><span>ENEMY KILLJOY</span>
-                        <p>“Your inventions are pretty good. Mine are just better.”</p>
-                    </blockquote>
-                    <blockquote><span>ALLY CYPHER</span>
-                        <p>“Don't worry. Your secrets are safe with me. Probably.”</p>
-                    </blockquote>
-                    <blockquote><span>ALLY RAZE</span>
-                        <p>“Please tell me you aren't planning to blow up my equipment again.”</p>
-                    </blockquote>
-                    <blockquote><span>SPIKE AT SPAWN</span>
-                        <p>“Hello? Objective? Anyone?”</p>
-                    </blockquote>
+        </section>
+        <section class="section-card bark-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">COMPLETE DIALOGUE LIST</p>
+                    <h2>Every bark, trigger, and variation</h2>
+                    <p>This table includes all 52 dialogue entries from the original assignment,
+                        keeping the trigger names and A/B/C variations together so each line can be understood in its
+                        gameplay context.</p>
                 </div>
-            </section>
-
-
-            <section class="content-section bark-table-section" id="complete-bark-bank">
-                <p class="eyebrow">07 / COMPLETE DIALOGUE BANK</p>
-                <h2>Every bark, trigger, and variation</h2>
-                <p class="section-intro">This table includes all 52 dialogue entries from the original assignment,
-                    keeping the trigger names and A/B/C variations together so each line can be understood in its
-                    gameplay context.</p>
-                <div class="bark-table-wrap" role="region" aria-label="Complete character bark bank table" tabindex="0">
-                    <table class="bark-table">
-                        <thead>
-                            <tr>
-                                <th>Character</th>
-                                <th>Context</th>
-                                <th>Trigger</th>
-                                <th>Line (Dialogue)</th>
-                                <th>Variation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Start of match</td>
-                                <td>Systems online. Let&#x27;s get this over with.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Start of match</td>
-                                <td>I&#x27;ve got eyes on the battlefield. Try not to disappoint me.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Ability Cast - Tracepoint</td>
-                                <td>Sensor&#x27;s active. Nobody gets through unnoticed.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Ability Triggered - Tracepoint</td>
-                                <td>Got something on the wire!</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Ability Destroyed - Tracepoint</td>
-                                <td>Someone&#x27;s been messing with my equipment.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Ability Cast - Dead Air</td>
-                                <td>Going radio silent!</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Ability Cast - Dead Air</td>
-                                <td>We&#x27;ve got the element of surprise.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Ability Cast - Feedback</td>
-                                <td>Let&#x27;s see what you&#x27;re hiding!</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Ability Cast - Feedback</td>
-                                <td>Getting a little interference?</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Ultimate Ability - Blackout</td>
-                                <td>Let&#x27;s take you all offline!</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Ultimate Ability - Blackout</td>
-                                <td>LIGHTS OUT!</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Kill</td>
-                                <td>One signal lost.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Kill</td>
-                                <td>That&#x27;s one less problem.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Kill Streak</td>
-                                <td>Is anyone else even trying?</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Kill Streak</td>
-                                <td>Keep them coming! I&#x27;m just getting started!</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - General</td>
-                                <td>I&#x27;ve seen better aim in a training simulation.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - General</td>
-                                <td>Don&#x27;t worry. I&#x27;ll pretend that was impressive.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - General</td>
-                                <td>They should probably check their settings. Something&#x27;s clearly wrong.</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Enemy Killjoy</td>
-                                <td>You know, we should really stop competing. I&#x27;m getting bored of winning.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Enemy Killjoy</td>
-                                <td>Your inventions are pretty good. Mine are just better.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Enemy Jett</td>
-                                <td>Careful. You&#x27;re starting to look predictable.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Enemy Jett</td>
-                                <td>Running circles around me won&#x27;t help when I know where you are.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Enemy Jett</td>
-                                <td>You move fast, Jett. Let&#x27;s see if you can think that fast, too.</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Enemy Cypher</td>
-                                <td>All those cameras, and you still didn&#x27;t see me coming?</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Enemy Cypher</td>
-                                <td>You&#x27;re not the only one who knows how to gather information.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Enemy Sova</td>
-                                <td>You look for targets. I already know where they are.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Enemy Sova</td>
-                                <td>Tracking me? That&#x27;s adorable.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Enemy Raze</td>
-                                <td>Do you ever solve problems without explosions?</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Enemy Omen</td>
-                                <td>One of these days, I&#x27;m putting a tracker on you.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Enemy Omen</td>
-                                <td>No signal, no footsteps... you&#x27;re a nightmare for my equipment.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Killjoy</td>
-                                <td>Still using that old prototype? I thought we agreed to upgrade it.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Killjoy</td>
-                                <td>Admit it, Killjoy. You like having someone who can keep up with you.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Killjoy</td>
-                                <td>Two geniuses on one team. What could possibly go wrong?</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Jett</td>
-                                <td>Hey Jett, try not to outrun the rest of us this time.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Cypher</td>
-                                <td>How many cameras do you actually need? Seriously.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Cypher</td>
-                                <td>You know, you could just ask me for information instead of spying on everyone.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Cypher</td>
-                                <td>Don&#x27;t worry. Your secrets are safe with me. Probably.</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Sova</td>
-                                <td>You find them, I&#x27;ll track them. Sounds like a good partnership.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Sova</td>
-                                <td>Ever thought about letting your drone do all the work?</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Sova</td>
-                                <td>Your recon skills are impressive. Don&#x27;t let it go to your head.</td>
-                                <td>C</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Raze</td>
-                                <td>You break it, you buy it. I&#x27;m serious this time.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Raze</td>
-                                <td>Please tell me you aren&#x27;t planning to blow up my equipment again.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Omen</td>
-                                <td>AHH! Could you make a sound when you appear behind me? Just once!?</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Omen</td>
-                                <td>One day, I&#x27;m going to figure out how you do that.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Phoenix</td>
-                                <td>Try not to blind your own team this time.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Phoenix</td>
-                                <td>Is the confidence included in your ability kit, or is that extra?</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Sage</td>
-                                <td>You really do keep this team together, don&#x27;t you?</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Taunt - Ally Sage</td>
-                                <td>If I get injured, I&#x27;m blaming you for not keeping me out of trouble.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>In between rounds / Idle</td>
-                                <td>I should probably stop taking apart my equipment during matches.</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>In between rounds / Idle</td>
-                                <td>I wonder if Killjoy would notice if I borrowed one of her tools.</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Spike at Spawn</td>
-                                <td>I&#x27;ve marked the Spike. Could someone actually retrieve it?</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Yuna Mori (Pulse)</td>
-                                <td>Combat</td>
-                                <td>Spike at Spawn</td>
-                                <td>Hello? Objective? Anyone?</td>
-                                <td>B</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <section class="reflection-section" id="reflection">
-                <p class="eyebrow">08 / LOOKING BACK</p>
-                <h2>Reflection</h2>
-                <p class="reflection-intro">Looking back on the writing process, the character voice, and how the
-                    dialogue supports gameplay. These reflection prompts are left open for your own experience and
-                    takeaways.</p>
-                <div class="reflection-prompts">
-                    <article><span>WHAT I LEARNED</span>
-                        <p>[Add what you learned about writing short, reactive dialogue and keeping a character's voice
-                            consistent across different gameplay triggers.]</p>
-                    </article>
-                    <article><span>WHAT WORKED WELL</span>
-                        <p>[Add which bark categories, lines, or character interactions you think were most successful,
-                            and why.]</p>
-                    </article>
-                    <article><span>WHAT I WOULD DEVELOP FURTHER</span>
-                        <p>[Add what you would revise or expand, such as additional situational barks, more
-                            agent-specific interactions, or further variations.]</p>
-                    </article>
-                </div>
-            </section>
-
-            <footer class="page-footer"><span>YUNA MORI / PULSE · CHARACTER BARK BANK</span><a href="#top-nav">Back to
-                    top ↑</a></footer>
-        </main>
-    </div>
+                <div class="count">52 <small> BARKS</small></div>
+            </div>
+            <div class="bark-table-wrap" role="region" aria-label="Complete character bark bank table" tabindex="0">
+                <table class="bark-table">
+                    <thead>
+                        <tr>
+                            <th>Character</th>
+                            <th>Context</th>
+                            <th>Trigger</th>
+                            <th>Line (Dialogue)</th>
+                            <th>Variation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Start of match</td>
+                            <td>Systems online. Let&#x27;s get this over with.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Start of match</td>
+                            <td>I&#x27;ve got eyes on the battlefield. Try not to disappoint me.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Ability Cast - Tracepoint</td>
+                            <td>Sensor&#x27;s active. Nobody gets through unnoticed.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Ability Triggered - Tracepoint</td>
+                            <td>Got something on the wire!</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Ability Destroyed - Tracepoint</td>
+                            <td>Someone&#x27;s been messing with my equipment.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Ability Cast - Dead Air</td>
+                            <td>Going radio silent!</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Ability Cast - Dead Air</td>
+                            <td>We&#x27;ve got the element of surprise.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Ability Cast - Feedback</td>
+                            <td>Let&#x27;s see what you&#x27;re hiding!</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Ability Cast - Feedback</td>
+                            <td>Getting a little interference?</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Ultimate Ability - Blackout</td>
+                            <td>Let&#x27;s take you all offline!</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Ultimate Ability - Blackout</td>
+                            <td>LIGHTS OUT!</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Kill</td>
+                            <td>One signal lost.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Kill</td>
+                            <td>That&#x27;s one less problem.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Kill Streak</td>
+                            <td>Is anyone else even trying?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Kill Streak</td>
+                            <td>Keep them coming! I&#x27;m just getting started!</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - General</td>
+                            <td>I&#x27;ve seen better aim in a training simulation.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - General</td>
+                            <td>Don&#x27;t worry. I&#x27;ll pretend that was impressive.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - General</td>
+                            <td>They should probably check their settings. Something&#x27;s clearly wrong.</td>
+                            <td>C</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Enemy Killjoy</td>
+                            <td>You know, we should really stop competing. I&#x27;m getting bored of winning.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Enemy Killjoy</td>
+                            <td>Your inventions are pretty good. Mine are just better.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Enemy Jett</td>
+                            <td>Careful. You&#x27;re starting to look predictable.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Enemy Jett</td>
+                            <td>Running circles around me won&#x27;t help when I know where you are.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Enemy Jett</td>
+                            <td>You move fast, Jett. Let&#x27;s see if you can think that fast, too.</td>
+                            <td>C</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Enemy Cypher</td>
+                            <td>All those cameras, and you still didn&#x27;t see me coming?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Enemy Cypher</td>
+                            <td>You&#x27;re not the only one who knows how to gather information.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Enemy Sova</td>
+                            <td>You look for targets. I already know where they are.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Enemy Sova</td>
+                            <td>Tracking me? That&#x27;s adorable.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Enemy Raze</td>
+                            <td>Do you ever solve problems without explosions?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Enemy Omen</td>
+                            <td>One of these days, I&#x27;m putting a tracker on you.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Enemy Omen</td>
+                            <td>No signal, no footsteps... you&#x27;re a nightmare for my equipment.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Killjoy</td>
+                            <td>Still using that old prototype? I thought we agreed to upgrade it.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Killjoy</td>
+                            <td>Admit it, Killjoy. You like having someone who can keep up with you.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Killjoy</td>
+                            <td>Two geniuses on one team. What could possibly go wrong?</td>
+                            <td>C</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Jett</td>
+                            <td>Hey Jett, try not to outrun the rest of us this time.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Cypher</td>
+                            <td>How many cameras do you actually need? Seriously.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Cypher</td>
+                            <td>You know, you could just ask me for information instead of spying on everyone.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Cypher</td>
+                            <td>Don&#x27;t worry. Your secrets are safe with me. Probably.</td>
+                            <td>C</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Sova</td>
+                            <td>You find them, I&#x27;ll track them. Sounds like a good partnership.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Sova</td>
+                            <td>Ever thought about letting your drone do all the work?</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Sova</td>
+                            <td>Your recon skills are impressive. Don&#x27;t let it go to your head.</td>
+                            <td>C</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Raze</td>
+                            <td>You break it, you buy it. I&#x27;m serious this time.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Raze</td>
+                            <td>Please tell me you aren&#x27;t planning to blow up my equipment again.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Omen</td>
+                            <td>AHH! Could you make a sound when you appear behind me? Just once!?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Omen</td>
+                            <td>One day, I&#x27;m going to figure out how you do that.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Phoenix</td>
+                            <td>Try not to blind your own team this time.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Phoenix</td>
+                            <td>Is the confidence included in your ability kit, or is that extra?</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Sage</td>
+                            <td>You really do keep this team together, don&#x27;t you?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Taunt - Ally Sage</td>
+                            <td>If I get injured, I&#x27;m blaming you for not keeping me out of trouble.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>In between rounds / Idle</td>
+                            <td>I should probably stop taking apart my equipment during matches.</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>In between rounds / Idle</td>
+                            <td>I wonder if Killjoy would notice if I borrowed one of her tools.</td>
+                            <td>B</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Spike at Spawn</td>
+                            <td>I&#x27;ve marked the Spike. Could someone actually retrieve it?</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Yuna Mori (Pulse)</td>
+                            <td>Combat</td>
+                            <td>Spike at Spawn</td>
+                            <td>Hello? Objective? Anyone?</td>
+                            <td>B</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="section-card reflection">
+            <p class="eyebrow">LOOKING BACK</p>
+            <h2>Reflection</h2>
+            <p>Looking back on the writing process, the character voice, and how the
+                dialogue supports gameplay. These reflection prompts are left open for your own experience and
+                takeaways.</p>
+            <div class="reflection-prompts">
+                <article>
+                    <h3>What I Learned</h3>
+                    <p>[Add what you learned about writing short, reactive dialogue and keeping a character's voice
+                        consistent.]</p>
+                </article>
+                <article>
+                    <h3>What Worked Well</h3>
+                    <p>[Add which bark categories or lines you think best communicate Shiro's personality and fighting
+                        style.]</p>
+                </article>
+                <article>
+                    <h3>What I Would Develop Further</h3>
+                    <p>[Add what you would revise, expand, or explore if you continued developing this bark bank.]</p>
+                </article>
+            </div>
+        </section>
+        <footer class="page-footer"><span>YUNA MORI / PULSE · CHARACTER BARK BANK    </span><a href="#top-nav">Back to
+                top ↑</a></footer>
+    </main>
 </body>
 
 </html>

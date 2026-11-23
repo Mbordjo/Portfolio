@@ -108,3 +108,9 @@
     position: relative;
     z-index: 10;
 }
+
+/*mostly for the index page*/
+
+#herofeature{
+    margin-top: 20px;
+}
