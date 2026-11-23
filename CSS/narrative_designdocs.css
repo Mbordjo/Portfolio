@@ -394,6 +394,22 @@ figcaption {
     font-size: .94rem;
 }
 
+.narrative-card__link{
+  display:flex;
+  justify-content: right;
+}
+
+.narrative-card__link a{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-clr);
+  font-family: var(--Tilt);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color .2s ease, transform .2s ease;
+}
+
 @media (max-width: 760px) {
   .narrative-page #top-nav { padding: 0 18px; }
   .narrative-page #top-nav .top-links { gap: 14px; }

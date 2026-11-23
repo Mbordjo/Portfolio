@@ -1,0 +1,1557 @@
+:: StoryTitle
+Topic Hub Implementation
+
+
+:: StoryData
+{
+  "ifid": "47AE27F9-01B6-4CC2-90BC-E80A92F9398A",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "THE FORGOTTEN TIDES",
+  "tag-colors": {
+    "NOTE": "purple",
+    "4-Dan-maybe??": "orange"
+  },
+  "zoom": 1
+}
+
+
+:: About {"position":"225,350","size":"100,100"}
+NPC: "I've lived here for most of my life."
+
+(if:)[
+	NPC: "After everything I've told you, I suppose you understand me a little better.
+]
+(else:)[
+	NPC: "Perhaps we'll get to know each other better as we talk."
+]
+
+[[Back to conversation topics. ->MainHub]]
+
+
+:: AboutPlace {"position":"375,350","size":"100,100"}
+NPC:"This place has a long and complicated history"
+NPC: "Not everything you hear about this is true"
+[[Back to conversation topics. ->MainHub]]
+
+
+:: Dragon Quest {"position":"1025,1400","size":"100,100"}
+Your journey takes you into the mountains beyond the northern border.
+
+The path becomes increasingly difficult as you approach the ruins of the Fallen Kingdom.
+
+Broken towers stretch toward the sky, and enormous statues lie buried beneath the earth.
+
+Your crystal pendant begins to vibrate.
+
+A deep voice echoes throughout the ruins.
+
+Dragon: "Who dares enter the remains of a kingdom long forgotten?"
+
+A massive dragon emerges from the ruins.
+
+Its scales shimmer with silver and violet, and its eyes glow like burning embers.
+
+Dragon: "Another treasure hunter? Or perhaps another fool seeking the secrets of the past?"
+{
+(if: $firstGuardian is "Leviathan")[
+    Dragon: "I can sense the ocean's blessing upon you."
+
+    Dragon: "The sea has always been too trusting of outsiders."
+]
+(else-if: $firstGuardian is "Phoenix")[
+    Dragon: "The Phoenix has shared its knowledge with you?"
+
+    Dragon: "Then perhaps you have already learned more than most mortals ever will."
+]
+(else-if: $firstGuardian is "Warden")[
+    Dragon: "The crystals recognize you."
+
+    Dragon: "That power should have remained buried with this kingdom."
+]
+}
+Dragon: "Tell me, traveler. Why have you come?"
+
+[[I seek the truth about the Great Sundering->DragonTrial]]
+
+
+:: DragonMemory {"position":"1025,1650","size":"100,100"}
+You search the abandoned ruins and recover the three fragments.
+
+As you place them together, the royal seal begins to glow.
+
+A strange vision appears before you.
+
+You see the ancient kingdom as it once existed.
+
+Magnificent towers stretch across the landscape.
+
+Celestial symbols illuminate the night sky.
+
+And standing before an enormous throne is a mysterious figure surrounded by four lights.
+
+The vision suddenly disappears.
+
+The dragon approaches.
+
+Dragon: "So you have seen it."
+
+Dragon: "The kingdom did not fall because of a simple disaster."
+
+Dragon: "Someone attempted to change the balance of the realms."
+
+Dragon: "The guardians were forced to intervene."
+
+Dragon: "But even their combined power was not enough."
+
+The dragon lowers its head.
+
+Dragon: "There was another presence. A celestial power unlike anything the kingdom had ever witnessed."
+
+Dragon: "I cannot tell you whether that power saved our world or brought about its destruction."
+
+Dragon: "The truth was lost with the kingdom."
+
+The dragon gives you a fragment of its ancient scale.
+
+Dragon: "Take this. You have earned it."
+{
+(set: $dragonDone to true)
+
+(if: $firstGuardian is "none")[
+    (set: $firstGuardian to "Dragon")
+
+    The pendant glows with a violet light.
+
+    A strange warmth spreads through the ancient crystal.
+]
+}
+[[Return to the guardian map->Quest Hub]]
+
+
+:: DragonTrial {"position":"925,1525","size":"100,100"}
+Dragon: "The Great Sundering..."
+
+The dragon lets out a low growl.
+
+Dragon: "A catastrophe that should never have occurred."
+
+Dragon: "You wish to understand what happened to this kingdom?"
+
+Dragon: "Then prove that you are worthy of knowing."
+
+The dragon points toward three ancient structures surrounding the ruined castle.
+
+Dragon: "Within these ruins are three fragments of the royal seal."
+
+Dragon: "Recover them and bring them to the throne room."
+
+Dragon: "But understand this. The past is not always something that should be uncovered."
+
+[[Accept the Dragon's trial->DragonMemory]]
+
+
+:: End {"position":"1250,800","size":"100,100"}
+The archivist watches as you begin gathering your belongings.
+
+Royal Archivist: "Leaving already?"
+
+{(if: $learnedHistory and $learnedGuardians
+and $learnedEvents)[
+
+    Royal Archivist: "Well, you've certainly learned quite a bit today."
+
+	Royal Archivist: "I hope the things I've shared with you have given you a better understanding of our world."
+
+]
+(else:)[
+
+    Royal Archivist: "There is still much about this world that remains undiscovered."
+
+    Royal Archivist: "Perhaps you'll find yourself curious enough to return."
+
+]
+
+(if: $learnedGirl)[
+
+    Royal Archivist: "And do keep an eye on the ocean, traveler."
+
+    Royal Archivist: "If the stories are true, the Princess may not remain a mystery forever."
+
+]}
+
+The archivist gives you a small nod.
+
+Royal Archivist: "Until we meet again. May the tides guide your journey."
+
+You leave the archive and step back into the quiet village.
+
+THE END
+
+[[Start Over->THE FORGOTTEN TIDES]]
+
+
+
+:: Forgotten Tides Variables [startup] {"position":"700,550","size":"100,100"}
+{
+
+(set: $learnedGirl to false)
+(set: $learnedHistory to false)
+(set: $learnedGuardians to false)
+(set: $learnedEvents to false)
+
+(set: $acceptedQuest to false)
+
+(set: $leviathanDone to false)
+(set: $dragonDone to false)
+(set: $phoenixDone to false)
+(set: $wardenDone to false)
+
+(set: $yes to false)
+
+(set: $firstGuardian to "none")
+
+}
+
+
+:: Goodbye {"position":"975,350","size":"100,100"}
+NPC: "It was nice talking with you. Take care!"
+
+(if: $foundSecret is true)[
+	NPC: "And remember, keep what I told you between us...
+]
+
+THE END
+
+
+:: Guardian Reunion {"position":"1250,1250","size":"100,100"}
+You return to the village after your long journey.
+
+The archivist is waiting inside the archive.
+
+As you enter, he immediately notices the four glowing objects you carry.
+
+Royal Archivist: "You actually did it..."
+
+Royal Archivist: "The Leviathan, the Dragon, the Phoenix, and the Warden..."
+
+Royal Archivist: "All four guardians have recognized you."
+
+He approaches the objects.
+
+Royal Archivist: "May I?"
+
+You place the four rewards upon his desk.
+
+The crystals begin to glow.
+
+Their lights connect, forming a strange celestial symbol.
+
+The archivist stares at it.
+
+Royal Archivist: "This symbol..."
+
+Royal Archivist: "I've seen it before."
+
+He quickly retrieves an old manuscript from his bookshelf.
+
+Royal Archivist: "The celestial princess."
+
+Royal Archivist: "The four guardians were never meant to stand alone."
+
+Royal Archivist: "Their powers were connected through her."
+
+Royal Archivist: "And now, with the guardians awakened, the path to her kingdom should finally be accessible."
+
+He looks at you.
+
+Royal Archivist: "Traveler, I believe it is time you met Arriguii."
+{
+(if: $firstGuardian is "Leviathan")[
+    Royal Archivist: "The ocean was the first to recognize you."
+
+    Royal Archivist: "Perhaps the Princess will be particularly interested in hearing what the Leviathan told you."
+]
+
+(else-if: $firstGuardian is "Dragon")[
+    Royal Archivist: "You began your journey among the ruins of the old kingdom."
+
+    Royal Archivist: "I suspect the Dragon's memories may have revealed something important."
+]
+
+(else-if: $firstGuardian is "Phoenix")[
+    Royal Archivist: "The stars revealed their memories to you first."
+
+    Royal Archivist: "You may understand the Princess's celestial origins better than most."
+]
+
+(else-if: $firstGuardian is "Warden")[
+    Royal Archivist: "The Forgotten Realm recognized you first."
+
+    Royal Archivist: "That is quite remarkable. The Warden rarely trusts anyone."
+]
+}
+[[Tell me how to find her.->MeetingGuii]]
+
+
+:: Incident {"position":"525,350","size":"100,100"}
+NPC: "Something happened here a long time ago."
+
+NPC: "I haven't told anyone the entire story before."
+
+(set: $heardStory to true)
+
+NPC: "Now that you know what happened, perhaps you're ready to hear something else."
+
+[[Back to conversation topics ->MainHub]]
+
+
+:: Leviathan Quest {"position":"900,1400","size":"100,100"}
+You arrive at the edge of the coastline, where the water appears unusually dark.
+
+The crystal pendant around your neck begins to glow.
+
+You remember the archivist's words.
+
+"The Leviathan. Guardian of the oceans."
+
+You board a small vessel and sail toward the coordinates marked on your map.
+
+As you approach the location, the sea suddenly becomes still.
+
+A deep rumbling sound echoes beneath the boat.
+
+The water begins to glow.
+
+Something enormous moves beneath the surface.
+
+A voice echoes through your mind.
+
+Leviathan: "Another surface dweller..."
+
+Leviathan: "Have you come to disturb my resting place?"
+{
+(if: $firstGuardian is "none")[
+    The Leviathan studies you carefully.
+
+    Leviathan: "You carry no familiar scent. Who sent you here?"
+]
+(else:)[
+    The Leviathan notices the strange energy surrounding your pendant.
+	
+    Leviathan: "You have already walked among my kin."
+	
+    Leviathan: "Interesting. Perhaps you are not as ordinary as you seem."
+]
+}
+Leviathan: "Speak. Why have you come to these waters?"
+
+[[I want to understand what is happening->LeviathanTruth]]
+
+[[I was sent to find the guardians->LeviathanTruth]]
+
+
+:: LeviathanTrial {"position":"875,1650","size":"100,100"}
+You explore the submerged ruins.
+
+After searching the ancient temple, you recover three ocean relics.
+
+Each relic glows with a different shade of blue.
+
+You place them within the temple's central altar.
+
+The entire structure begins to illuminate.
+
+The water surrounding the temple becomes calm.
+
+The Leviathan slowly approaches.
+
+Leviathan: "So the old magic has not completely disappeared."
+
+Leviathan: "You have restored something that was lost."
+
+The enormous creature lowers its head toward you.
+
+Leviathan: "I remember the one who once watched over these waters."
+
+Leviathan: "A little celestial being with a heart far greater than her understanding of this world."
+
+Leviathan: "She was always curious about the surface."
+
+Leviathan: "Always creating strange little things from magic and light."
+
+Leviathan: "I wonder if she still remembers me."
+
+The Leviathan gives you a small glowing scale.
+
+Leviathan: "Take this."
+
+Leviathan: "Should you ever need safe passage through the ocean, my waters will recognize you."
+
+{
+(set: $leviathanDone to true)
+
+(if: $firstGuardian is "none")[
+    (set: $firstGuardian to "Leviathan")
+    The crystal pendant glows with a brilliant blue light.
+
+    You feel a strange connection forming between yourself and the ocean.
+]
+}
+[[Return to the guardian map->Quest Hub]]
+
+
+:: LeviathanTruth {"position":"750,1525","size":"100,100"}
+Leviathan: "The guardians..."
+
+A low rumble travels through the surrounding water.
+
+Leviathan: "It has been many centuries since anyone spoke of us."
+
+Leviathan: "The world above has forgotten what it once owed to the oceans."
+
+You notice several damaged structures surrounding the creature.
+
+Leviathan: "Something has disturbed the ancient seals beneath this sea."
+
+Leviathan: "The currents are changing. The old songs are fading."
+
+Leviathan: "And yet you arrive carrying a fragment of celestial magic."
+
+The Leviathan moves closer.
+
+Leviathan: "If you wish to understand, then help me restore what has been broken."
+
+The Leviathan reveals three glowing relics scattered throughout the ruins.
+
+Leviathan: "Recover the three ocean relics. Return them to their places within the temple."
+
+Leviathan: "Only then will I know whether you can be trusted."
+
+[[Begin exploring the Sunken Kingdom->LeviathanTrial]]
+
+
+:: LockedSecret {"position":"825,350","size":"100,100"}
+NPC:"That's something I can't discuss with you yet."
+NPC:"Maybe if you learn more about what happened, I'll tell you."
+[[Back to conversation topics. ->MainHub]]
+
+
+:: MainHub {"position":"600,200","size":"100,100"}
+NPC: "What would you like to talk about?"
+
+{(if: $heardStory is true) [
+	NPC: "I see you've already heard about what happened."
+]
+(else:)[
+	NPC: There's still so much you don't know.
+]}
+
+[[Tell me about yourself ->About]]
+[[Tell me about this place ->AboutPlace]]
+[[What happened here? ->Incident]]
+{(if: $heardStory is true)[
+	[[Tell me your secret ->Secret]]
+]
+(else:)[
+[[Ask about the secret ->LockedSecret]]
+]}
+[[I should get going... ->Goodbye]]
+
+
+:: MeetingGuii {"position":"1400,1350","size":"100,100"}
+The archivist hands you a small crystal key.
+
+Royal Archivist: "This should open the ancient passage beneath the abandoned lighthouse."
+
+Royal Archivist: "Follow the path beneath the waves. It will lead you to the ocean palace."
+
+You thank the archivist and make your way toward the lighthouse.
+
+The crystal key begins to glow.
+
+An enormous staircase appears beneath the water.
+
+You descend into the depths.
+
+After traveling through the underwater passage, you arrive at a magnificent palace.
+
+Its walls are covered in glowing crystals, and strange celestial symbols illuminate the floor.
+
+You enter the throne room.
+
+For a moment, everything is completely silent.
+
+Then...
+
+A small voice echoes from somewhere behind the throne.
+
+??? : "BYTE! WAIT!"
+
+Something falls over.
+
+??? : "OW! WHO PUT THAT THERE?!"
+
+A tiny pixel-like creature floats into view.
+
+It looks at you.
+
+Then it quickly disappears behind a nearby pillar.
+
+A girl slowly peeks out from behind the throne.
+
+She has long indigo hair with bright cyan highlights, crystal wings, and a glowing halo.
+
+Guii: "H-Hello?"
+
+Guii: "Um... you're not supposed to be here yet."
+
+She looks at the crystal pendant around your neck.
+
+Guii: "Wait..."
+
+Guii: "Where did you get that?"
+{
+(if: $firstGuardian is "Leviathan")[
+    Guii: "The Leviathan gave you one of its scales?"
+
+    Guii: "You met them?!"
+]
+
+(else-if: $firstGuardian is "Dragon")[
+    Guii: "You actually met the Dragon?"
+
+    Guii: "Oh goodness... I hope they weren't too grumpy."
+]
+
+(else-if: $firstGuardian is "Phoenix")[
+    Guii: "The Phoenix shared its memories with you?"
+
+    Guii: "I wonder what it showed you..."
+]
+
+(else-if: $firstGuardian is "Warden")[
+    Guii: "The Crystal Warden recognized you?"
+
+    Guii: "That's... actually really impressive!"
+]
+}
+Guii looks at the four objects you have collected.
+
+Guii: "You met all four guardians?"
+
+She pauses.
+
+Guii: "Oh."
+
+Guii: "Oh no."
+
+Guii: "Does that mean something is happening again?"
+
+The little pixel creature floats beside her.
+
+Guii: "Byte, please tell me you know what's going on."
+
+Byte makes a few electronic beeping noises.
+
+Guii: "You don't know either?!
+
+She sighs.
+
+Guii: "Okay... I think we have a LOT to talk about."
+
+She looks toward you.
+
+Guii: "Um... I'm Arriguii."
+
+Guii: "But you can call me Guii!"
+
+Guii: "Welcome to my kingdom."
+
+THE END
+
+CHAPTER 1 COMPLETE
+
+[[Begin the next chapter->NextChapter]]
+
+
+:: NextChapter {"position":"1550,1425","size":"100,100"}
+(TO BE CONTINUED)
+
+
+:: PLEASE READ [NOTE] {"position":"900,50","size":"200,200"}
+This top hub that isnt linked to the "start" of the story is just for the assignment having a very basic topic hub
+
+However I wanted to add a story that will incorperate some quest design as well... that is what is actually linked to the start of the story so if you want to just look at the assignment work just switch the start of the story to be on the passaged named "Start", if not & you want to see this full story then leave it here and play the work :D
+
+Thanks!
+
+
+:: Phoenix Quest {"position":"1150,1400","size":"100,100"}
+Your journey takes you toward the floating islands of the Shattered Skies.
+
+High above the clouds rests an ancient observatory.
+
+Its towers are covered in crystalline structures, and strange symbols cover its walls.
+
+Your pendant begins to glow.
+
+A beautiful light appears within the observatory.
+
+A magnificent Phoenix emerges, its feathers shimmering with blue, violet, and gold.
+
+Phoenix: "A visitor..."
+
+Phoenix: "It has been a long time since anyone sought the knowledge of the stars."
+{
+(if: $firstGuardian is "Dragon")[
+    Phoenix: "The Dragon has allowed you to leave its ruins?"
+
+    Phoenix: "Then perhaps the past has finally begun to move again."
+]
+(else-if: $firstGuardian is "Leviathan")[
+    Phoenix: "I can sense the ocean within your crystal."
+
+    Phoenix: "The Leviathan has always been a keeper of memories."
+]
+(else-if: $firstGuardian is "Warden")[
+    Phoenix: "The ancient crystals..."
+
+    Phoenix: "So the Forgotten Realm has begun to awaken."
+]
+}
+Phoenix: "Tell me, traveler. What knowledge do you seek?"
+
+[[I wish to understand the celestial realm->PhoenixResearch]]
+
+
+:: PhoenixMemory {"position":"1150,1650","size":"100,100"}
+You explore the floating islands and recover three ancient records.
+
+You place them within the observatory's central mechanism.
+
+The ancient symbols begin to illuminate.
+
+A celestial projection appears above the observatory.
+
+You see a beautiful world filled with stars and light.
+
+A young celestial being watches the world below.
+
+She appears fascinated by the creations of mortals. The vision changes.
+
+You see four enormous creatures standing beneath a celestial sky.
+
+A voice echoes through the observatory.
+
+Unknown Voice: "The guardians must remain connected."
+
+Unknown Voice: "The balance must never be broken."
+
+The vision fades.
+
+Phoenix: "You have witnessed a memory from before the Great Sundering."
+
+Phoenix: "The celestial being you saw was not an ordinary guardian."
+
+Phoenix: "She was destined to watch over the ocean."
+
+Phoenix: "The records speak of a name..."
+
+Phoenix: "Arriguii."
+
+The Phoenix looks toward you.
+
+Phoenix: "I believe you are searching for someone who has been waiting a very long time."
+
+The Phoenix gives you a glowing celestial feather.
+
+Phoenix: "Keep this. It will help you recognize the magic of the stars."
+{
+(set: $phoenixDone to true)
+
+(if: $firstGuardian is "none")[
+    (set: $firstGuardian to "Phoenix")
+
+    The pendant shines with a brilliant golden-violet light.
+
+    For a moment, you feel as though something in the stars is watching over you.
+]
+}
+[[Return to the guardian map->Quest Hub]]
+
+
+:: PhoenixResearch {"position":"1250,1525","size":"100,100"}
+Phoenix: "The celestial realm..."
+
+The Phoenix spreads its wings.
+
+Phoenix: "A place beyond the reach of ordinary mortals."
+
+Phoenix: "Long ago, celestial beings watched over the worlds below."
+
+Phoenix: "They guided the stars, protected the balance of nature, and shaped the foundations of ancient magic."
+
+The Phoenix looks toward the distant sky.
+
+Phoenix: "One among them became particularly fascinated with the world of mortals."
+
+Phoenix: "She admired their creativity, their inventions, and their desire to create things that did not yet exist."
+
+Phoenix: "She was different from the others."
+
+Phoenix: "She wished to understand the world rather than simply watch over it."
+
+The Phoenix turns toward you.
+
+Phoenix: "If you wish to uncover the truth of the celestial realm, you must restore the observatory."
+
+Phoenix: "Three celestial records have been scattered throughout these islands."
+
+Phoenix: "Find them, and the stars may reveal what history has forgotten."
+
+[[Begin searching for the celestial records->PhoenixMemory]]
+
+
+:: QUESTIONS [4-Dan-maybe??] {"position":"1500,800","size":"100,100"}
+I was trying to get the ( click: ) macro to work for when you click the page something happens. it did work even though it was tedious however when the page got too long it kept jumping all the way to the beginning :/ and i thought it was too distracting and removing the immersion that I wanted to do so thats why i removed that feature.
+
+
+:: Quest Accepted {"position":"1100,1125","size":"100,100"}
+{(set: $acceptedQuest to true)}
+
+You look down at the glowing crystal resting on the archivist's desk.
+
+You take a moment to consider the journey ahead.
+
+You: "Alright. I'll do it."
+
+You: "I'll find the four guardians and uncover what happened."
+
+The archivist seems relieved.
+
+Royal Archivist: "You have my gratitude."
+
+Royal Archivist: "I wish I could accompany you, but my research belongs here. There are still records I must uncover."
+
+He hands you an old map.
+
+Royal Archivist: "I've marked the locations of the four territories."
+
+Royal Archivist: "The guardians are not creatures to be approached carelessly. Each has its own history, its own trials, and its own reasons for remaining hidden."
+
+Royal Archivist: "Do not assume that strength alone will be enough."
+
+He gives you a small crystal pendant.
+
+Royal Archivist: "This belonged to an old traveler who once explored the shattered realms."
+
+Royal Archivist: "It should help you recognize the ancient magic surrounding the guardians."
+
+The crystal glows faintly.
+
+Royal Archivist: "One last thing..."
+
+Royal Archivist: "The order in which you approach the guardians may reveal different pieces of the past."
+
+Royal Archivist: "Pay attention to what they tell you. Even the smallest detail may prove important."
+
+You take the map and pendant.
+
+(text-style:"bold","underline")[''NEW QUEST:'']
+The Four Guardians
+
+Your journey begins.
+
+[[Examine the map and choose your destination.->Quest Hub]]
+
+
+
+:: Quest Hub {"position":"1100,1250","size":"100,100"}
+You unfold the map the archivist gave you.
+
+Four locations have been marked, each representing one of the ancient guardians.
+
+Where will you travel next?
+{
+(if: $leviathanDone)[
+    ✔ The Song Beneath the Waves
+    The Sunken Kingdom
+    The Leviathan's blessing has been
+    earned.
+]
+(else:)[
+    [[The Song Beneath the Waves - The Sunken Kingdom - Seek the Leviathan->Leviathan Quest]]
+]
+
+(if: $dragonDone)[
+    ✔ The Ashes of Yesterday
+    The Fallen Kingdom
+    The Dragon's trial has been completed.
+]
+(else:)[
+    [[The Ashes of Yesterday - The Fallen Kingdom - Find the Ancient Dragon->Dragon Quest]]
+]
+
+(if: $phoenixDone)[
+    ✔ A Memory Among the Star
+    The Shattered Skies
+    The Phoenix's history has been uncovered.
+]
+(else:)[
+    [[A Memory Among the Star - The Shattered Skies - Research the Phoenix->Phoenix Quest]]
+]
+
+(if: $wardenDone)[
+    ✔ The Heart of the Forgotten
+    The Forgotten Realm
+    The Crystal Warden has been restored.
+]
+(else:)[
+    [[The Heart of the Forgotten - The Forgotten Realm - Restore the Crystal Warden->Warden Quest]]
+]
+
+(if: $leviathanDone and $dragonDone
+and $phoenixDone and $wardenDone)[
+    All four guardians have been encountered.
+
+    [[Return to the Royal Archivist->Guardian Reunion]]
+]
+}
+[[Review your journey->Quest Journal]]
+
+
+:: Quest Journal {"position":"900,1200","size":"100,100"}
+(text-style:"bold","underline")[QUEST JOURNAL]
+
+You open your journal and begin
+reviewing your discoveries.
+
+================================
+
+(text-style:"bold","underline")[MAIN QUEST]
+The Four Guardians
+{
+(if: $acceptedQuest)[
+    Your mission is to seek out the four ancient guardians and uncover the truth behind the Great Sundering.
+]
+(else:)[
+    You have not yet accepted a royal request.
+]
+
+(if: $leviathanDone and $dragonDone
+and $phoenixDone and $wardenDone)[
+    QUEST COMPLETE
+
+    All four guardians have been encountered.
+
+    Return to the Royal Archivist.
+]
+(else:)[
+    QUEST IN PROGRESS
+
+    (if: $leviathanDone)[
+        ✔ Leviathan — Befriended
+    ]
+    (else:)[
+        ✦ Leviathan — Find the
+        guardian of the oceans.
+    ]
+
+    (if: $dragonDone)[
+        ✔ Ancient Dragon — Trial completed
+    ]
+    (else:)[
+        ✦ Ancient Dragon — Face the
+        guardian of the Fallen Kingdom.
+    ]
+
+    (if: $phoenixDone)[
+        ✔ Celestial Phoenix — Researched
+    ]
+    (else:)[
+        ✦ Celestial Phoenix — Uncover
+        the memories of the stars.
+    ]
+
+    (if: $wardenDone)[
+        ✔ Crystal Warden — Restored
+    ]
+    (else:)[
+        ✦ Crystal Warden — Restore
+        the Forgotten Realm.
+    ]
+]
+}
+
+================================
+
+(text-style:"bold","underline")[GUARDIAN RECORDS]
+{
+(if: $leviathanDone)[
+    THE LEVIATHAN
+
+    Realm: The Sunken Kingdom
+
+    A guardian of the oceans. Once protective of the ancient underwater civilization.
+
+    The Leviathan remembers a celestial being who watched over the waters.
+]
+
+(if: $dragonDone)[
+    THE ANCIENT DRAGON
+
+    Realm: The Fallen Kingdom
+
+    A guardian of the lost civilization.
+
+    The Dragon remembers the Great Sundering and speaks of a mysterious celestial power connected to its destruction.
+]
+
+(if: $phoenixDone)[
+    THE CELESTIAL PHOENIX
+
+    Realm: The Shattered Skies
+
+    A guardian of celestial memories.
+
+    Its records reveal that a celestial being once watched over the world below.
+
+    The name Arriguii appears in its ancient memories.
+]
+
+(if: $wardenDone)[
+    THE CRYSTAL WARDEN
+
+    Realm: The Forgotten Realm
+
+    A guardian of the ancient crystal network.
+
+    It revealed that the celestial princess was the source of the magic connecting the four realms.
+]
+}
+================================
+
+(text-style:"bold","underline")[DISCOVERIES]
+{
+(if: $learnedGirl)[
+    ✔ Rumors of the Princess of the Oceans.
+]
+
+(if: $learnedHistory)[
+    ✔ The Great Sundering and the Fallen Kingdom.
+]
+
+(if: $learnedGuardians)[
+    ✔ The four ancient guardians.
+]
+
+(if: $learnedEvents)[
+    ✔ Strange occurrences across the four territories.
+]
+}
+================================
+
+(text-style:"bold","underline")[JOURNEY NOTES]
+
+Your first encounter:
+{
+(if: $firstGuardian is "none")[
+    You have not encountered a guardian yet.
+]
+(else-if: $firstGuardian is "Leviathan")[
+    The Leviathan was the first guardian you encountered.
+
+    The ocean was the first to recognize your journey.
+]
+(else-if: $firstGuardian is "Dragon")[
+    The Ancient Dragon was the first guardian you encountered.
+
+    Your journey began among the ruins of the Fallen Kingdom.
+]
+(else-if: $firstGuardian is "Phoenix")[
+    The Celestial Phoenix was the first guardian you encountered.
+
+    Your journey began among the stars and forgotten memories.
+]
+(else-if: $firstGuardian is "Warden")[
+    The Crystal Warden was the first guardian you encountered.
+
+    Your journey began in the Forgotten Realm.
+]
+}
+================================
+
+[[Return to the previous location->Quest Hub]]
+
+
+
+:: Right aligned... [NOTE] {"position":"1400,1100","size":"100,100"}
+Tried right align and watch Dan's old vid on it... didn't look right.
+
+on "you" in [[Quest Accepted]] 
+
+
+:: RoyalRequest {"position":"1200,1000","size":"100,100"}
+The archivist becomes unusually quiet.
+
+He looks toward the large bookshelf behind his desk before approaching it.
+
+Royal Archivist: "There is something else I haven't told you."
+
+He reaches behind several old books and retrieves a small wooden box.
+
+Royal Archivist: "I've spent many years researching the Great Sundering."
+
+Royal Archivist: "For a long time, I believed the four guardians were simply creatures of legend."
+
+He opens the box.
+
+Inside rests an ancient crystal, its surface glowing with a faint blue and violet light.
+
+Royal Archivist: "But several months ago, I discovered something hidden within an old celestial manuscript."
+
+He carefully lifts the crystal.
+
+Royal Archivist: "The four guardians were not simply protectors of their respective territories."
+
+Royal Archivist: "They were connected. Their powers were intertwined with the very foundation of our world."
+
+Royal Archivist: "When the Great Sundering occurred, their connection was broken."
+
+Royal Archivist: "And now, after centuries of silence, their power is beginning to stir once again."
+
+The crystal flickers.
+
+Royal Archivist: "I believe something is causing the ancient balance to weaken."
+
+He pauses.
+
+Royal Archivist: "And I believe the mysterious Princess of the Oceans may be connected to all of this."
+
+He places the crystal on the desk.
+
+Royal Archivist: "There is a name written within the oldest records."
+
+Royal Archivist: "Arriguii."
+
+Royal Archivist: "I do not know whether that is her true name, or simply the name given to her by those who once worshipped her."
+
+Royal Archivist: "But if anyone understands the connection between the guardians and the celestial realm, it would be her."
+
+He looks directly at you.
+
+Royal Archivist: "Unfortunately, reaching her will not be as simple as sailing across the ocean."
+
+Royal Archivist: "Before we can find her, we must understand what has happened to the four guardians."
+
+Royal Archivist: "I need you to travel to their respective territories."
+
+Royal Archivist: "Earn the Leviathan's trust. Face the Ancient Dragon. Uncover the truth of the Phoenix. And restore the Crystal Warden."
+
+Royal Archivist: "Each guardian holds a piece of the history we have lost."
+
+Royal Archivist: "Together, those pieces may finally reveal what caused the Great Sundering."
+
+He takes a step back.
+
+Royal Archivist: "I know this is a great deal to ask of a stranger."
+
+Royal Archivist: "But I have a feeling you are exactly the person we have been waiting for."
+
+What will you do?
+
+[[I accept. I'll find the four guardians.->Quest Accepted]]
+
+[[I need some time to think.->Story Hub]]
+
+
+
+:: Secret {"position":"675,350","size":"100,100"}
+(if: $heardStory is true)[
+	NPC: "There is something I've been keeping hidden..."
+    NPC: "I think you're ready to know the truth"
+    (set: $foundSecret = true)
+]
+(else:)[
+	NPC: "I'm not ready to tell you that just yet...
+]
+[[Back to conversation topics. ->MainHub]]
+
+
+:: Start {"position":"400,50","size":"100,100"}
+You approach an NPC.
+
+NPC: "Oh! Hello there. I wasn't expecting visitors."
+
+NPC: "There are a few things we could talk about. What would you like to know?"
+
+[[Let's Talk ->MainHub]] 
+[[Nevermind ->Goodbye]]
+
+
+:: Story Hub {"position":"1200,600","size":"100,100"}
+Royal Archivist: "What would you like to know?"
+
+{(if: $learnedHistory and $learnedGuardians and $learnedEvents)[
+    (if: $learnedGirl)[
+    
+        Royal Archivist: "I see you've discovered quite a bit about our world."
+	(set: $yes to true)
+    ]
+    (else:)[
+    
+        Royal Archivist: "There is something else you should know about the Princess before we continue."
+    ]
+]
+(else:)[
+
+    Royal Archivist: "Take your time. There is much to learn about this world."
+]}
+
+[[Tell me about the mysterious girl.->The Mysterious Girl]]
+
+[[Tell me about the Kingdom of Tides.->The Kingdom of Tides]]
+
+[[Tell me about the Fallen Kingdom.->The Fallen Kingdom]]
+
+[[Tell me about the Four Guardians.->The Four Guardians]]
+
+[[Tell me about the strange occurrences.->The Strange Occurrences]]
+{(if: $yes)[
+	[[I think it's time you told me what you're hiding.->The Royal Request]]
+]}
+[[I should get going.->End]]
+
+
+:: Story_var [startup] {"position":"200,100","size":"100,100"}
+{
+(set: $heardStory to false)
+(set:$foundSecret to false)
+(set: $conversationCount to 0)
+}
+
+
+:: THE FORGOTTEN TIDES {"position":"900,550","size":"100,100"}
+Royal Archivist: "Ah a visitor. It's been quite some time since we've had anyone travel this far into the kingdom."
+
+Royal Archivist: "You've probably noticed the strange happenings around the village."
+
+Royal Archivist: "The ocean has not been behaving as it should."
+
+Royal Archivist: "For centuries, these lands have been protected by ancient guardians. Their stories have been passed down through generations, though most people consider them nothing more than fairy tales."
+
+Royal Archivist: "But I fear those stories may be more imporant than we once believed."
+
+Royal Archivist: "Perhaps you can help me uncover something I've spent years trying to understand."
+
+[[Royal Archivist: What would you like to know? ->Story Hub]]
+
+[[Nevermind... ->End]]
+
+
+:: The Fallen Kingdom {"position":"750,800","size":"100,100"}
+The archivist's expression becomes more
+serious.
+
+He reaches beneath his desk and pulls out a dusty map.
+
+Royal Archivist: "The Fallen Kingdom..."
+
+Royal Archivist: "A rather unfortunate chapter in our world's history."
+
+He spreads the map across the desk.
+
+Royal Archivist: "Before the Great Sundering, our world was not divided into the separate territories we know today."
+
+Royal Archivist: "There was once a great central kingdom that connected all the realms."
+
+Royal Archivist: "It was a place where different civilizations lived together, where magic was studied, and where the ancient guardians were said to reside."
+
+He points toward the center of the map.
+
+Royal Archivist: "At the heart of it stood a magnificent kingdom. Its people possessed knowledge far beyond anything we understand today."
+
+Royal Archivist: "They studied the stars, the elements, and even the very foundations of magic itself."
+
+He pauses.
+
+Royal Archivist: "Then came the Great Sundering."
+
+Royal Archivist: "No one knows exactly what happened. Some records describe a catastrophic event that tore the world apart."
+
+Royal Archivist: "Others speak of an enormous surge of magical energy that shattered the kingdom and scattered its territories across the world."
+
+Royal Archivist: "Entire cities disappeared. Ancient structures crumbled. The paths connecting the realms were lost."
+
+Royal Archivist: "And strangely enough, many of the records describing the event were destroyed or deliberately hidden."
+
+He rolls the map back up.
+
+Royal Archivist: "Some historians believe the four ancient guardians were involved."
+
+Royal Archivist: "But whether they caused the Sundering or tried to prevent it..."
+
+Royal Archivist: "That is something I have yet to discover."
+{
+(set: $learnedHistory to true)
+}
+[[Return to the conversation.->Story Hub]]
+
+
+:: The Four Guardians {"position":"875,800","size":"100,100"}
+The archivist's eyes light up as you mention the ancient guardians.
+
+Royal Archivist: "Ah! Now that is a subject I could discuss for hours."
+
+He walks over to a nearby bookshelf and retrieves an enormous illustrated manuscript.
+
+Royal Archivist: "According to the oldest records, four extraordinary creatures once watched over our world."
+
+He opens the manuscript.
+
+Royal Archivist: "Each guardian was connected to a different realm, and each possessed powers unlike anything ordinary beings could comprehend."
+
+He turns to the first illustration.
+
+Royal Archivist: "The first was the Leviathan, guardian of the oceans."
+
+Royal Archivist: "An enormous creature said to dwell beneath the deepest waters."
+
+Royal Archivist: "Sailors feared its enormous silhouette, but ancient records describe it as a protector rather than a monster."
+
+He turns another page.
+
+Royal Archivist: "The second was the Ancient Dragon, guardian of the Fallen Kingdom."
+
+Royal Archivist: "A creature of immense strength and wisdom, said to protect the remains of the civilization that existed before the Great Sundering."
+
+He turns another page.
+
+Royal Archivist: "The third was the Celestial Phoenix, guardian of the Shattered Skies."
+
+Royal Archivist: "Its feathers were said to shine like the stars themselves. Some believed it possessed the ability to preserve memories and restore what was lost."
+
+Finally, he turns to the last illustration.
+
+Royal Archivist: "And the fourth..."
+
+Royal Archivist: "The Crystal Warden, guardian of the Forgotten Realm."
+
+Royal Archivist: "A mysterious being connected to the ancient crystal network that once maintained the balance of magic throughout the world."
+
+He closes the manuscript.
+
+Royal Archivist: "Each guardian served a purpose. Together, they maintained the balance between the realms."
+
+Royal Archivist: "But after the Great Sundering, their stories slowly disappeared."
+
+Royal Archivist: "Some believe they perished. Others believe they retreated into their respective territories."
+
+Royal Archivist: "Personally, I believe they are still out there."
+
+He looks toward the window.
+
+Royal Archivist: "And if the recent disturbances are anything to go by, perhaps they are beginning to awaken."
+{
+(set: $learnedGuardians to true)
+}
+[[Return to the conversation.->Story Hub]]
+
+
+:: The Kingdom of Tides {"position":"625,800","size":"100,100"}
+The archivist walks toward a large window overlooking the distant ocean.
+
+Royal Archivist: "The Kingdom of Tides..."
+
+Royal Archivist: "A beautiful place, isn't it? At least, it was once considered the jewel of the old world."
+
+He gestures toward the ocean.
+
+Royal Archivist: "Long before our village existed, these waters were home to an enormous civilization."
+
+Royal Archivist: "Its people built magnificent cities along the coastlines and even beneath the ocean itself."
+
+Royal Archivist: "They believed the sea was more than just a source of life. They believed it was a living force, one connected to the stars and the celestial realm."
+
+He takes a small crystal from his desk.
+
+Royal Archivist: "These crystals were once used throughout the kingdom. They carried magical energy and helped maintain the kingdom's defenses."
+
+Royal Archivist: "Some say they were gifts from the celestial beings who watched over the world."
+
+Royal Archivist: "Others believe they were created by the ancient guardians themselves."
+
+He places the crystal back on the desk.
+
+Royal Archivist: "Unfortunately, much of that knowledge was lost during the Great Sundering."
+
+Royal Archivist: "The ocean kingdom was among the few territories that managed to survive the catastrophe, though not without losing much of its history."
+
+Royal Archivist: "Many of our oldest structures are now buried beneath the waves."
+
+Royal Archivist: "There are even rumors of an entire palace hidden somewhere beneath the ocean floor."
+
+Royal Archivist: "I sometimes wonder what secrets it might still contain."
+
+He returns to his desk.
+
+Royal Archivist: "Perhaps one day, someone will uncover what was lost."
+
+[[Return to the conversation.->Story Hub]]
+
+
+:: The Mysterious Girl {"position":"500,800","size":"100,100"}
+The archivist pauses for a moment before reaching for an old book resting on his desk.
+
+Royal Archivist: "Ah, yes. The girl."
+
+Royal Archivist: "I had a feeling you might ask about her. It seems the stories have begun spreading beyond the village."
+
+He opens the book, revealing an illustration of a mysterious winged figure surrounded by waves and stars.
+
+Royal Archivist: "There have been countless accounts of a strange girl appearing along the coastline."
+
+Royal Archivist: "Some fishermen claim to have seen her standing upon the surface of the ocean, as though the water itself were carrying her."
+
+Royal Archivist: "Others speak of enormous wings, glowing like the colors of the deepest ocean, and a halo that shines like the stars above."
+
+He turns another page.
+
+Royal Archivist: "The oldest records refer to her as the Princess of the Oceans."
+
+Royal Archivist: "A rather unusual title, don't you think? Especially considering that no one seems to know where she came from."
+
+Royal Archivist: "Some believe she is a celestial being sent to protect our world. Others believe she is an ancient sea spirit."
+
+Royal Archivist: "Personally, I find the latter rather difficult to believe. Though, I suppose I have seen stranger things in these archives."
+
+He closes the book.
+
+Royal Archivist: "Whatever she may be, there is one thing the stories seem to agree on."
+
+Royal Archivist: "Whenever the ocean is in danger, she is never far away."
+
+Royal Archivist: "Perhaps she is nothing more than a legend. But I have a feeling there is some truth behind these tales."
+{(set: $learnedGirl to true)}
+[[Return to the conversation.->Story Hub]]
+
+
+:: The Royal Request {"position":"1125,800","size":"100,100"}
+{(if: $learnedHistory and $learnedGuardians)[
+    The archivist watches you for a moment, seemingly lost in thought.
+    
+    Royal Archivist: "I see you've been paying attention to the stories I've shared."
+    
+    He glances toward the old manuscript resting on his desk.
+    
+    Royal Archivist: "There is something I've been meaning to discuss with you."
+    
+    Royal Archivist: "You see, the history of the Fallen Kingdom and the four guardians are far more connected than most people realize."
+    
+    He hesitates before continuing.
+    
+    Royal Archivist: "Perhaps it's time I told you about something I've kept hidden within these archives."
+    
+    [[Ask about the Royal Request.->RoyalRequest]]
+]
+(else:)[
+    The archivist closes the manuscript and returns it to the bookshelf.
+    
+    Royal Archivist: "Hmm... perhaps I have shared too little, too soon."
+    
+    Royal Archivist: "There are still pieces of this world's history you need to understand before I can explain what I've discovered."
+    
+    [[Ask about the Fallen Kingdom.->The Fallen Kingdom]]
+    
+    [[Ask about the Four Guardians.->The Four Guardians]]
+    
+    [[Back to conversation topics.->Story Hub]]
+    
+    [[Leave the archive.->End]]
+]}
+
+
+:: The Strange Occurrences {"position":"1000,800","size":"100,100"}
+The archivist sighs and looks toward the window.
+
+Royal Archivist: "I'm afraid this is the reason I've been spending so much time in these archives lately."
+
+Royal Archivist: "Something is happening throughout the kingdom."
+
+He pulls out a collection of letters and reports.
+
+Royal Archivist: "It started a few months ago. At first, the villagers thought the ocean was simply experiencing unusual weather."
+
+Royal Archivist: "But then the reports began to grow stranger."
+
+He hands you the first report.
+
+Royal Archivist: "Fishermen have reported seeing enormous shadows moving beneath the water."
+
+Royal Archivist: "Some claim they heard a beautiful melody coming from the ocean during the night."
+
+He hands you another report.
+
+Royal Archivist: "Travelers returning from the northern mountains have spoken of strange lights appearing above the ruins of the Fallen Kingdom."
+
+Royal Archivist: "Others have reported hearing what sounds like distant roaring."
+
+He places another letter on the desk.
+
+Royal Archivist: "And then there is the matter of the old observatory."
+
+Royal Archivist: "It has been abandoned for centuries, yet recently, its celestial mechanisms have begun activating on their own."
+
+He pauses before continuing.
+
+Royal Archivist: "Perhaps the strangest report comes from the Forgotten Realm."
+
+Royal Archivist: "Several travelers claim that the ancient crystals scattered throughout the region have started glowing again."
+
+Royal Archivist: "All four territories. All at once."
+
+He gathers the reports.
+
+Royal Archivist: "Do you see the connection?"
+
+Royal Archivist: "The ocean, the mountains, the skies, and the forgotten lands..."
+
+Royal Archivist: "The four guardians."
+
+Royal Archivist: "I cannot say for certain what is happening, but I fear something has disturbed the balance that once held this world together."
+
+He lowers his voice.
+
+Royal Archivist: "And if my suspicions are correct, the Princess of the Oceans may know more than anyone."
+{
+(set: $learnedEvents to true)
+}
+[[Return to the conversation.->Story Hub]]
+
+
+:: Warden Quest {"position":"1275,1400","size":"100,100"}
+Your final destination lies beyond the shattered territories.
+
+The Forgotten Realm is strangely quiet.
+
+Trees covered in glowing crystals surround an abandoned civilization.
+
+The ground is scattered with broken fragments of ancient magical structures.
+
+Your pendant begins to glow.
+
+A faint voice echoes through the forest.
+
+Unknown Voice: "The light..."
+
+Unknown Voice: "It has been so long..."
+
+You follow the sound toward a clearing.
+
+At its center rests a magnificent creature resembling a stag.
+
+Its body is covered in crystalline structures, though many have lost their glow.
+
+Crystal Warden: "Who has come to disturb this forgotten place?"
+{
+(if: $firstGuardian is "Leviathan")[
+    Crystal Warden: "The ocean has shared its blessing with you."
+
+    Crystal Warden: "The ancient currents are beginning to move."
+]
+(else-if: $firstGuardian is "Dragon")[
+    Crystal Warden: "The Fallen Kingdom..."
+
+    Crystal Warden: "So the old memories are finally being uncovered."
+]
+(else-if: $firstGuardian is "Phoenix")[
+    Crystal Warden: "The stars have revealed their memories to you."
+
+    Crystal Warden: "Then perhaps there is still hope."
+]
+}
+Crystal Warden: "The crystals have lost their light."
+
+Crystal Warden: "Without them, this realm cannot awaken."
+
+[[I want to help restore this place->WardenRestoration]]
+
+
+:: WardenRestoration {"position":"1425,1525","size":"100,100"}
+Crystal Warden: "Then listen carefully."
+
+Crystal Warden: "Throughout this realm are three ancient crystal pillars."
+
+Crystal Warden: "They once connected the four territories through a network of magical energy."
+
+Crystal Warden: "But when the world was shattered, their power was lost."
+
+Crystal Warden: "Find the missing crystal fragments and return them to the pillars."
+
+Crystal Warden: "Only then can the Forgotten Realm awaken again."
+
+You explore the abandoned structures and recover the missing fragments.
+
+One by one, you restore the ancient pillars.
+
+A brilliant wave of light travels throughout the realm.
+
+The trees begin to glow.
+
+The crystals scattered throughout the ruins illuminate the forest.
+
+The Crystal Warden slowly rises.
+
+Crystal Warden: "The light..."
+
+Crystal Warden: "I remember now."
+
+The creature approaches you.
+
+Crystal Warden: "The world was once held together by a single source of celestial magic."
+
+Crystal Warden: "The guardians were created to maintain its balance."
+
+Crystal Warden: "But the source of that magic was never the guardians themselves."
+
+Crystal Warden: "It belonged to
+the celestial princess."
+
+The Warden looks toward your pendant.
+
+Crystal Warden: "She is the heart that connects the four realms."
+
+Crystal Warden: "Without her, the world will never truly return to what it once was."
+
+The Warden gives you a glowing crystal fragment.
+
+Crystal Warden: "Take this."
+
+Crystal Warden: "May it guide you toward the one who watches over the oceans."
+{
+(set: $wardenDone to true)
+
+(if: $firstGuardian is "none")[
+    (set: $firstGuardian to "Warden")
+
+    The pendant glows with a
+    brilliant crystalline light.
+
+    You feel an ancient power
+    awaken within it.
+]
+}
+[[Return to the guardian map->Quest Hub]]
+
+
+:: Whitespace...annoyed [NOTE] {"position":"900,1000","size":"100,100"}
+Yeah this page just doesnt wanna idk whats its problem...
+
+gotta love it.
+
+[[The Royal Request]] 
+
+in the quest in progress section .... [[Quest Journal]] 
+
+[[Leviathan Quest]] 
