@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiro Kurose — Character Bark Bank</title>
+    <link rel="stylesheet" href="../../CSS/topnav.css">
+    <link rel="stylesheet" href="../../CSS/phone.css">
+    <link rel="stylesheet" href="../../CSS/narrative_barks.css">
+</head>
+
+<body>
+    <div id="top-nav">
+        <div class="menu">
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="back-btn">
+        <button onclick="window.history.back()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#e3e3e3">
+                <path d="M14,18L8,12l6-6l1.4,1.4L10.8,12l4.6,4.6L14,18Z" />
+            </svg>
+            <span>Back</span>
+        </button>
+    </div>
+    <span class="top-label">NARRATIVE DESIGN / INTERACTIVE NARRATIVE</span>
+    <main class="page">
+            <section class="intro">
+            <p class="eyebrow">ORIGINAL WORLD · DIALOGUE TREE / QUEST DESIGN</p>
+            <h1>The Forgotten <span>Tides</span></h1>
+            <p class="subtitle">An interactive fantasy story built around player-led conversations, discoveries, and a
+                four-guardian quest.
+            </p>
+            <div class="project-tags">
+                <span>TWINE: HARLOWE</span>
+                <span>BRANCHING DIALOGUE</span>
+                <span>QUEST DESIGN</span>
+            </div>
+            <div class="description">
+                <h2>Project Description</h2>
+                <p>This project began as a topic-based dialogue hub where players can choose what they want to ask an
+                    NPC and
+                    explore the conversation at their own pace. I expanded that foundation into a larger fantasy story
+                    called
+                    <em>The Forgotten Tides</em>, where the player speaks with a Royal Archivist, learns about the
+                    kingdom's
+                    history and four ancient guardians, and gradually uncovers a larger mystery.
+                </p>
+                <p>The conversation is designed to reward curiosity. Players can investigate the mysterious girl, the
+                    Kingdom of
+                    Tides, the Fallen Kingdom, the guardians, and strange events happening across the territories.
+                    Learning
+                    particular pieces of information unlocks the Royal Request, which introduces the main quest: seek
+                    out the
+                    Leviathan, Ancient Dragon, Celestial Phoenix, and Crystal Warden. The player can choose the order in
+                    which to
+                    visit them, and a quest journal tracks discoveries and progress. Completing the guardian journey
+                    leads to an
+                    encounter with Arriguii (Guii), setting up the next chapter.</p>
+                <p>I built the experience in Twine using Harlowe, passage links, variables, and conditional passages to
+                    make
+                    dialogue and quest progression respond to the player's choices.</p>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">PLAY THE PROJECT</p>
+                    <h2>Explore the Interactive Story</h2>
+                    <p>Open the exported Twine story to experience the dialogue choices and quest progression.</p>
+                </div>
+                <span class="chapter-mark">CH. 01</span>
+            </div>
+            <a class="primary-link" href="PROJECT/topic-hub-interactive.html" target="_blank" rel="noopener">Play The
+                Forgotten Tides <span>↗</span></a>
+            <p class="small-note">The original exported HTML is included in this project folder. JavaScript must be
+                enabled in
+                your browser to play it.</p>
+        </section>
+
+        <section class="section-card">
+            <p class="eyebrow">HOW THE EXPERIENCE IS STRUCTURED</p>
+            <h2>From Conversation to Quest</h2>
+            <div class="flow">
+                <article class="flow-step">
+                    <span class="step-number">01</span>
+                    <h3>Meet the Archivist</h3>
+                    <p>The player enters the archive and chooses which topics to discuss.</p>
+                </article>
+                <article class="flow-step">
+                    <span class="step-number">02</span>
+                    <h3>Unlock the Request</h3>
+                    <p>Learning about the Fallen Kingdom and the four guardians makes the Royal Request available.</p>
+                </article>
+                <article class="flow-step">
+                    <span class="step-number">03</span>
+                    <h3>Choose the Guardians</h3>
+                    <p>The player selects among four regional quests, with dialogue that can acknowledge earlier
+                        encounters.</p>
+                </article>
+                <article class="flow-step">
+                    <span class="step-number">04</span>
+                    <h3>Track the Journey</h3>
+                    <p>The quest hub and journal show completed guardians, discoveries, and which guardian was
+                        encountered first.
+                    </p>
+                </article>
+                <article class="flow-step">
+                    <span class="step-number">05</span>
+                    <h3>Reach the Reunion</h3>
+                    <p>After all four guardians are encountered, the player returns to the archivist and meets Guii.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <p class="eyebrow">QUEST DESIGN</p>
+            <h2>The Four Guardian Paths</h2>
+            <p>Each guardian has a distinct location and objective. The player can choose the order rather than
+                following one
+                fixed sequence.</p>
+            <div class="quest-grid">
+                <article class="quest-card">
+                    <span class="quest-index">01 / OCEAN</span>
+                    <h3>The Song Beneath the Waves</h3>
+                    <p><strong>Realm:</strong> The Sunken Kingdom</p>
+                    <p>Seek the Leviathan and earn its trust.</p>
+                </article>
+                <article class="quest-card">
+                    <span class="quest-index">02 / RUINS</span>
+                    <h3>The Ashes of Yesterday</h3>
+                    <p><strong>Realm:</strong> The Fallen Kingdom</p>
+                    <p>Face the Ancient Dragon and investigate the Great Sundering.</p>
+                </article>
+                <article class="quest-card">
+                    <span class="quest-index">03 / SKY</span>
+                    <h3>A Memory Among the Star</h3>
+                    <p><strong>Realm:</strong> The Shattered Skies</p>
+                    <p>Research the Celestial Phoenix and uncover its memories.</p>
+                </article>
+                <article class="quest-card">
+                    <span class="quest-index">04 / CRYSTAL</span>
+                    <h3>The Heart of the Forgotten</h3>
+                    <p><strong>Realm:</strong> The Forgotten Realm</p>
+                    <p>Restore the Crystal Warden and the realm's crystal network.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-card systems">
+            <p class="eyebrow">IMPLEMENTATION</p>
+            <h2>Dialogue & Progression Systems</h2>
+            <div class="system-grid">
+                <article>
+                    <h3>Conditional Topics</h3>
+                    <p>Variables record which subjects the player has learned about. The Royal Request is gated until
+                        the required
+                        history and guardian information has been explored.</p>
+                </article>
+                <article>
+                    <h3>Quest State</h3>
+                    <p>Separate completion variables track the Leviathan, Dragon, Phoenix, and Warden paths. Completed
+                        quests are
+                        reflected in the map and journal.</p>
+                </article>
+                <article>
+                    <h3>Flexible Quest Order</h3>
+                    <p>The player chooses the next guardian from the quest hub. Dialogue can change based on which
+                        guardian was
+                        encountered first or which other guardians have already been met.</p>
+                </article>
+                <article>
+                    <h3>Fallback Dialogue</h3>
+                    <p>Locked topics have responses that explain why information is not available yet, keeping the
+                        conversation
+                        usable even when a player tries an option early.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-card reflection">
+            <p class="eyebrow">PROCESS NOTE · LOOKING BACK</p>
+            <h2>Reflection</h2>
+            <p>For this project, I wanted to create an interactive dialogue experience where players could explore
+                topics at
+                their own pace. I expanded the original topic hub by adding a quest line, turning it into a larger
+                interactive
+                fantasy story. I chose Twine with Harlowe because I had some familiarity with the tool and wanted to
+                refresh my
+                skills while working with branching dialogue and story variables.</p>
+            <p>One implementation decision I am particularly proud of was using conditional passages and variables to
+                track
+                the player's progress. This let dialogue options unlock or change depending on what the player had
+                already
+                explored. I also added fallback responses for locked topics, and built the guardian quest system so
+                players
+                could choose which guardian to visit first instead of being forced into one order.</p>
+            <p>One challenge was organizing all the passages and keeping track of the conditions needed to move through
+                the
+                story. With multiple dialogue branches, unlocked topics, and guardian quests, I had to carefully manage
+                variables and passage connections. I also struggled with whitespace formatting in Twine, which may cause
+                some
+                visual inconsistencies in passages. I experimented with a click-anywhere-to-continue interaction, but it
+                did not
+                work as intended, so I removed it.</p>
+            <p>Overall, this project helped me better understand how interactive dialogue systems use variables,
+                conditions,
+                and branching paths to create more engaging player experiences.</p>
+        </section>
+
+        <section class="section-card files">
+            <p class="eyebrow">PROJECT FILES</p>
+            <h2>Source & Export</h2>
+            <ul>
+                <li><a href="PROJECT/topic-hub-interactive.html" target="_blank" rel="noopener">Playable exported
+                        HTML</a> — the
+                    Twine story players can open in a browser.</li>
+                <li><a href="PROJECT/topic-hub-source.twee" download>Twine source (.twee)</a> — the editable passage
+                    source.
+                </li>
+            </ul>
+        </section>
+
+        <footer>THE FORGOTTEN TIDES · BRANCHING DIALOGUE & QUEST DESIGN</footer>
+    </main>
+</body>
+
+</html>
