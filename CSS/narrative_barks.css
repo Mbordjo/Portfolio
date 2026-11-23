@@ -33,6 +33,17 @@ footer a{
     padding-left: 5px;
 }
 
+.project-tags { display: flex; flex-wrap: wrap; gap: 9px; }
+.project-tags span {
+  padding: 6px 13px;
+  border: 1px solid rgba(98, 55, 124, .3);
+  border-radius: 999px;
+  color: var(--text-clr, #62377c);
+  background: rgba(255,255,255,.22);
+  font-size: .78rem;
+  margin-bottom: 20px;
+}
+
 #top-nav, #back-btn {
   background-color: var(--active-clr);
 }
